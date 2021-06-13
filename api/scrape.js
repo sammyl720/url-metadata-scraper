@@ -1,4 +1,3 @@
-const { parse } = require('url');
 const got = require('got');
 
 const metascraper = require('metascraper')([
@@ -11,6 +10,7 @@ const metascraper = require('metascraper')([
   require("metascraper-instagram")(),
   require("metascraper-lang")(),
   require("metascraper-logo")(),
+  require("metascraper-clearbit-logo")(),
   require("metascraper-logo-favicon")(),
   require("metascraper-publisher")(),
   require("metascraper-readability")(),
@@ -40,6 +40,6 @@ export default async function handler(req, res) {
     res.setHeader('Cache-Control', 's-maxage=3600');
     res.status(200).json(metadata);
   } catch (error) {
-    res.status(401).json({ error: `Unable to scrape "${url}"`});
+    res.status(401).json({ error: `Unable to scrape "${url}."`});
   }
 }
