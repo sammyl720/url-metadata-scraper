@@ -11,7 +11,6 @@ const metascraper = require('metascraper')([
   require("metascraper-instagram")(),
   require("metascraper-lang")(),
   require("metascraper-logo")(),
-  require("metascraper-clearbit-logo")(),
   require("metascraper-logo-favicon")(),
   require("metascraper-publisher")(),
   require("metascraper-readability")(),
