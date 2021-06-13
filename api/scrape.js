@@ -27,7 +27,7 @@ const metascraper = require('metascraper')([
 ])
 
 export default async function handler(req, res) {
-  const targetUrl = parse(req.url, true).query?.url;
+  const targetUrl = req.query?.url;
 
   if(!targetUrl){
     res.status(401)
