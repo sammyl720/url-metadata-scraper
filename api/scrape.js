@@ -40,6 +40,6 @@ export default async function handler(req, res) {
     res.setHeader('Cache-Control', 's-maxage=3600');
     res.status(200).json(metadata);
   } catch (error) {
-    res.status(401).json({ error: `Unable to scrape "${url}."`});
+    res.status(401).json({ error: `Unable to scrape "${targetUrl}"."`});
   }
 }
